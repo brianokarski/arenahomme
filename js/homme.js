@@ -5,8 +5,8 @@ $(document).ready(function() {
 
 function makeNewPosition() {
 
-    var h = $(window).height() - 50;
-    var w = $(window).width() - 50;
+    var h = $(window).height();
+    var w = $(window).width();
 
     var nh = Math.floor(Math.random() * h);
     var nw = Math.floor(Math.random() * w);
@@ -17,10 +17,26 @@ function makeNewPosition() {
 
 function animateDiv() {
     var newq = makeNewPosition();
-    $('.blogtitle').animate({
+    $('.img-1').animate({
+        top: newq[0],
+        left: newq[1]
+    }, 3500, function() {
+        animateDiv();
+    });
+
+    var newq = makeNewPosition();
+    $('.img-2').animate({
         top: newq[0],
         left: newq[1]
     }, 3000, function() {
+        animateDiv();
+    });
+
+    var newq = makeNewPosition();
+    $('.img-3').animate({
+        top: newq[0],
+        left: newq[1]
+    }, 2000, function() {
         animateDiv();
     });
 
