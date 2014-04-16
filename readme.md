@@ -1,3 +1,3 @@
-# Arena Homme+ – Splash
+# Arena Homme+: Issue 41
 
-Simple splash page for Arena Homme+
+Arena Homme+: Issue 41 minisite
