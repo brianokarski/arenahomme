@@ -3,20 +3,131 @@ body {
   background-color: #000;
 }
 .logo {
-  width: 100%;
+  width: 600px;
   height: 67px;
   text-align: center;
   position: fixed;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   z-index: 999;
+}
+.logo img {
+  width: 100%;
 }
 .fly {
   position: fixed;
-  width: 50%;
+  width: 40%;
   margin-top: -20%;
   margin-left: -20%;
-  border: 10px solid;
+  border: 2px solid;
   border-color: #87754f;
 }
 .fly :hover {
-  width: 58%;
+  width: 75%;
+}
+.window {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+}
+.img-1 {
+  height: 700px;
+  width: 536px;
+  top: 0;
+  border: 2px solid;
+  z-index: 444;
+  border-color: #87754f;
+  position: absolute;
+  -webkit-animation: bounce 4s infinite linear;
+  -moz-animation: bounce 4s infinite linear;
+}
+.img-2 {
+  height: 700px;
+  width: 536px;
+  top: 20px;
+  z-index: 555;
+  border: 2px solid;
+  border-color: #87754f;
+  position: absolute;
+  -webkit-animation: bounce 6s infinite linear;
+  -moz-animation: bounce 6s infinite linear;
+}
+@-webkit-keyframes bounce {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 40%;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+@-moz-keyframes bounce {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 40%;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+.bar {
+  height: 100%;
+  width: 0px;
+  position: absolute;
+  -webkit-animation: slide 5s infinite linear;
+  -moz-animation: slide 5s infinite linear;
+}
+.bar-2 {
+  height: 100%;
+  width: 0px;
+  position: absolute;
+  -webkit-animation: slide 8s infinite linear;
+  -moz-animation: slide 8s infinite linear;
+}
+@-webkit-keyframes slide {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 50%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+@-moz-keyframes slide {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 50%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+::selection {
+  background: #f00;
+}
+::-moz-selection {
+  background: #f00;
 }
