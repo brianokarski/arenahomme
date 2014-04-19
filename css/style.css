@@ -1,8 +1,37 @@
-html,
-body {
-  background-color: #000;
+/*
+Theme Name: ARENA HOMME+ 1.0
+Theme URI: http://thehommeplus.com
+Author: Brian Okarski
+Author URI: http://brianokarski.com
+Version: 1.0-wpcom
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: thehommeplus_1_0
+Domain Path: /languages/
+
+/* html5doctor.com Reset v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/) - http://cssreset.com */
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+html
+body{
+  background-color: black;
+  overflow: hidden;
 }
-.logo {
+
+#logo {
   width: 600px;
   height: 67px;
   text-align: center;
@@ -15,115 +44,78 @@ body {
   transform: translate(-50%, 0%);
   z-index: 999;
 }
-.logo img {
+#logo img {
   width: 100%;
 }
-.fly {
-  position: fixed;
-  width: 40%;
-  margin-top: -20%;
-  margin-left: -20%;
-  border: 2px solid;
-  border-color: #87754f;
-}
-.fly :hover {
-  width: 75%;
-}
-.window {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  overflow: hidden;
-  padding: 0;
-  border: 0;
-}
-.img-1 {
+.vert-1 {
   height: 700px;
   width: 536px;
-  top: 0;
+  top: 0px;
   border: 2px solid;
   z-index: 444;
   border-color: #87754f;
-  position: absolute;
+  position: fixed;
   -webkit-animation: bounce 4s infinite linear;
   -moz-animation: bounce 4s infinite linear;
+  animation: bounce 4s infinite linear;
 }
-.img-2 {
+.vert-2 {
   height: 700px;
   width: 536px;
   top: 0px;
   z-index: 555;
   border: 2px solid;
   border-color: #87754f;
-  position: absolute;
+  position: fixed;
   -webkit-animation: bounce 6s infinite linear;
   -moz-animation: bounce 6s infinite linear;
+  animation: bounce 6s infinite linear;
 }
 @-webkit-keyframes bounce {
-  0% {
-    top: 0;
-  }
-
-  50% {
-    top: 40%;
-  }
-
-  100% {
-    top: 0;
-  }
+  0% {top: 0;}
+  50% {top: 100%; margin-top: -700px;}
+  100% {top: 0;}
 }
 @-moz-keyframes bounce {
-  0% {
-    top: 0;
-  }
-
-  50% {
-    top: 40%;
-  }
-
-  100% {
-    top: 0;
-  }
+  0% {top: 0;}
+  50% {top: 100%; margin-top: -700px;}
+  100% {top: 0;}
 }
-.bar {
+@keyframes bounce {
+  0% {top: 0;}
+  50% {top: 100%; margin-top: -700px;}
+  100% {top: 0;}
+}
+.horiz-1 {
   height: 100%;
   width: 0px;
-  position: absolute;
+  position: fixed;
   -webkit-animation: slide 5s infinite linear;
   -moz-animation: slide 5s infinite linear;
+  animation: slide 5s infinite linear;
 }
-.bar-2 {
+.horiz-2 {
   height: 100%;
   width: 0px;
-  position: absolute;
+  position: fixed;
   -webkit-animation: slide 8s infinite linear;
   -moz-animation: slide 8s infinite linear;
+  animation: slide 8s infinite linear;
 }
 @-webkit-keyframes slide {
-  0% {
-    left: 0;
-  }
-
-  50% {
-    left: 50%;
-  }
-
-  100% {
-    left: 0;
-  }
+  0% {left: 10px;}
+  50% {left: 100%; margin-left: -536px;}
+  100% {left: 0;}
 }
 @-moz-keyframes slide {
-  0% {
-    left: 0;
-  }
-
-  50% {
-    left: 50%;
-  }
-
-  100% {
-    left: 0;
-  }
+  0% {left: 0;}
+  50% {left: 100%; margin-left: -536px;}
+  100% {left: 0;}
+}
+@keyframes slide {
+  0% {left: 0;}
+  50% {left: 100%; margin-left: -536px;}
+  100% {left: 0;}
 }
 ::selection {
   background: #f00;
